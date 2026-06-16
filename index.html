@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyScore</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .btn { margin-top: 20px; padding: 15px 30px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; display: none; }
+    </style>
+</head>
+<body>
+    <h2 id="status">Запускаем MoneyScore...</h2>
+    <a href="exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363" class="btn" id="fallback-btn">Открыть приложение</a>
+
+    <script>
+        const expoLink = "exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363";
+        window.location.href = expoLink;
+        setTimeout(() => {
+            document.getElementById('status').innerText = "Нажми кнопку ниже, чтобы открыть";
+            document.getElementById('fallback-btn').style.display = "block";
+        }, 1000);
+    </script>
+</body>
+</html>
