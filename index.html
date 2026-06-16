@@ -14,10 +14,20 @@
     <a href="exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363" class="btn" id="fallback-btn">Открыть приложение</a>
 
     <script>
-        const expoLink = "exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363";
+        const params = new URLSearchParams(window.location.search);
+        const path = params.get('path');
+        
+        let expoLink = "exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363";
+        
+        if (path) {
+            expoLink = expoLink + "/--/" + path;
+        }
+
         window.location.href = expoLink;
+
         setTimeout(() => {
             document.getElementById('status').innerText = "Нажми кнопку ниже, чтобы открыть";
+            document.getElementById('fallback-btn').href = expoLink;
             document.getElementById('fallback-btn').style.display = "block";
         }, 1000);
     </script>
