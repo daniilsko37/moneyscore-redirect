@@ -11,13 +11,13 @@
 </head>
 <body>
     <h2 id="status">Запускаем MoneyScore...</h2>
-    <a href="exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363" class="btn" id="fallback-btn">Открыть приложение</a>
+    <a href="exps://u.expo.dev/a78711f6-82f5-424f-855e-b1227a48b1a8/group/cd226a5c-548f-40e4-acce-73da0a7f5ff0" class="btn" id="fallback-btn">Открыть приложение</a>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const path = params.get('path');
         
-        let expoLink = "exps://u.expo.dev/update/019ec697-2bef-786b-8fd2-61a7a64d0363";
+        let expoLink = "exps://u.expo.dev/a78711f6-82f5-424f-855e-b1227a48b1a8/group/cd226a5c-548f-40e4-acce-73da0a7f5ff0";
         
         if (path) {
             expoLink = expoLink + "/--/" + path;
